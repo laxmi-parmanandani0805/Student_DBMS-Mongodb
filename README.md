@@ -66,19 +66,19 @@ collection = db["students"]
 
 ---
 
-##🔄 CRUD Operations
-  #➕ Create
+## 🔄 CRUD Operations
+  ** ➕ Create **
       Insert a new student record into the database
-  #📖 Read
+  ** 📖 Read **
       Fetch and display all student records
-  #✏️ Update
+  ** ✏️ Update **
       Modify existing student details
-  #❌ Delete
+  ** ❌ Delete **
       Remove a student record using ID
 
 ---
 
 ## 👩‍💻 Author
 
-**Laxmi Parmanandani**  
+** Laxmi Parmanandani **  
 - LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
