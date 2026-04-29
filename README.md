@@ -52,6 +52,8 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["student_db"]
 collection = db["students"]
 
+```python
+
 ---
 
 ## 📊 Sample Student Record
