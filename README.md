@@ -72,14 +72,14 @@ JSON
 ## 🔄 CRUD Operations
 
 
-**➕ Create**
-- Insert a new student record into the database
-**📖 Read**
-- Fetch and display all student records
-**✏️ Update**
-- Modify existing student details
-**❌ Delete**
-- Remove a student record using ID
+- **➕ Create:**
+Insert a new student record into the database
+- **📖 Read:**
+Fetch and display all student records
+- **✏️ Update:**
+Modify existing student details
+- **❌ Delete:**
+Remove a student record using ID
 
 ---
 
@@ -87,4 +87,4 @@ JSON
 
 
 **Laxmi Parmanandani** 
-LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
+- LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
