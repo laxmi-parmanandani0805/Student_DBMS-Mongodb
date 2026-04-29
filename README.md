@@ -46,8 +46,8 @@ Make sure you have the following installed:
 The project connects to MongoDB locally using:
 
 ```python
-from pymongo import MongoClient
 
+from pymongo import MongoClient
 client = MongoClient("mongodb://localhost:27017/")
 db = client["student_db"]
 collection = db["students"]
