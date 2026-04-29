@@ -52,6 +52,8 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["student_db"]
 collection = db["students"]
 
+```
+
 ---
 
 ## 📊 Sample Student Record
@@ -64,18 +66,25 @@ JSON
   "age": 20,
   "course": "Computer Science"
 }
-🔄 CRUD Operations
-➕ Create
+
+---
+
+## 🔄 CRUD Operations
+
+
+**➕ Create**
 Insert a new student record into the database
-
-📖 Read
+**📖 Read**
 Fetch and display all student records
-
-✏️ Update
+**✏️ Update**
 Modify existing student details
-
-❌ Delete
+**❌ Delete**
 Remove a student record using ID
 
-👩‍💻 Author
-Laxmi Parmanandani - LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
+---
+
+## 👩‍💻 Author
+
+
+**Laxmi Parmanandani** 
+LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
