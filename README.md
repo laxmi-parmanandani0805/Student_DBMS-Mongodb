@@ -46,45 +46,36 @@ Make sure you have the following installed:
 The project connects to MongoDB locally using:
 
 ```python
-
 from pymongo import MongoClient
+
 client = MongoClient("mongodb://localhost:27017/")
 db = client["student_db"]
 collection = db["students"]
-
-python```
 
 ---
 
 ## 📊 Sample Student Record
 
 
-```json
+JSON
 {
   "student_id": "101",
   "name": "John Doe",
   "age": 20,
   "course": "Computer Science"
 }
+🔄 CRUD Operations
+➕ Create
+Insert a new student record into the database
 
----
+📖 Read
+Fetch and display all student records
 
-## 🔄 CRUD Operations
+✏️ Update
+Modify existing student details
 
+❌ Delete
+Remove a student record using ID
 
-  **➕ Create**
-      Insert a new student record into the database
-  **📖 Read**
-      Fetch and display all student records
-  **✏️ Update**
-      Modify existing student details
-  **❌ Delete**
-      Remove a student record using ID
-
----
-
-## 👩‍💻 Author
-
-
-**Laxmi Parmanandani**  
-- LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
+👩‍💻 Author
+Laxmi Parmanandani - LinkedIn: https://www.linkedin.com/in/laxmi-parmanandani-63733a386/
