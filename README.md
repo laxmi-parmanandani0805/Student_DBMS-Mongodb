@@ -73,13 +73,13 @@ JSON
 
 
 **➕ Create**
-Insert a new student record into the database
+- Insert a new student record into the database
 **📖 Read**
-Fetch and display all student records
+- Fetch and display all student records
 **✏️ Update**
-Modify existing student details
+- Modify existing student details
 **❌ Delete**
-Remove a student record using ID
+- Remove a student record using ID
 
 ---
 
