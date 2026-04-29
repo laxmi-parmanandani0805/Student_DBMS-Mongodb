@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block head %}
+<style>
+    .delete-container { max-width: 450px; margin: 80px auto; background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 1px solid #fee2e2; }
+    .warning-box { color: #ef4444; font-size: 4rem; margin-bottom: 20px; }
+    h2 { color: #1e293b; margin-bottom: 10px; }
+    p { color: #64748b; line-height: 1.6; margin-bottom: 30px; }
+    .highlight { color: #ef4444; font-weight: 700; background: #fef2f2; padding: 2px 8px; border-radius: 4px; }
+    
+    .action-buttons { display: flex; gap: 15px; justify-content: center; }
+    .btn-confirm { background: #ef4444; color: white; border: none; padding: 12px 25px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: 0.3s; flex: 1; }
+    .btn-confirm:hover { background: #dc2626; }
+    .btn-cancel { background: #f1f5f9; color: #475569; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: 0.3s; flex: 1; }
+    .btn-cancel:hover { background: #e2e8f0; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="delete-container">
+    <div class="warning-box"><i class="fas fa-exclamation-triangle"></i></div>
+    <h2>Confirm Deletion</h2>
+    <p>Are you sure you want to permanently remove student <span class="highlight">#{{ roll_no }}</span>? This action cannot be undone.</p>
+    
+    <div class="action-buttons">
+        <form action="/delete_logic/{{ roll_no }}" method="POST" style="flex: 1;">
+            <button type="submit" class="btn-confirm">Delete Permanently</button>
+        </form>
+        <a href="/" class="btn-cancel">Cancel</a>
+    </div>
+</div>
+{% endblock %}

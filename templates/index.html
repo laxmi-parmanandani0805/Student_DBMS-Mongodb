@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% block head %}
+<style>
+    .header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+    .btn-add { background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; }
+    
+    .data-card { 
+        background: white; 
+        border-radius: 16px; 
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+        overflow: hidden; 
+    }
+    
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #f1f5f9; padding: 16px; text-align: left; color: #64748b; font-size: 0.85rem; text-transform: uppercase; }
+    td { padding: 16px; border-top: 1px solid #f1f5f9; }
+    tr:hover { background: #f8fafc; }
+    
+    .mark-pill { 
+        background: #e0e7ff; color: #4338ca; 
+        padding: 4px 12px; border-radius: 20px; font-weight: 600; 
+    }
+    .action-icons a { color: #94a3b8; margin-right: 15px; transition: 0.2s; }
+    .action-icons a.del:hover { color: #ef4444; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="header-flex">
+    <h1>Student Records</h1>
+    <a href="/add" class="btn-add">+ New Enrollment</a>
+</div>
+
+<div class="data-card">
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Roll Number</th>
+                <th>Academic Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in students %}
+            <tr>
+                <td style="font-weight: 500;">{{ s.name }}</td>
+                <td style="color: #64748b;">#{{ s.roll_no }}</td>
+                <td><span class="mark-pill">{{ s.marks }}%</span></td>
+                <td class="action-icons">
+                    <a href="/confirm_delete/{{ s.roll_no }}" class="del"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

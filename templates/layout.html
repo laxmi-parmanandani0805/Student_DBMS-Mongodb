@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStream | Student Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg-sidebar: #1e1b4b;
+            --bg-body: #f8fafc;
+            --text-main: #1e293b;
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            display: flex; 
+            background-color: var(--bg-body);
+            color: var(--text-main);
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            background: var(--bg-sidebar);
+            color: white;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; margin-bottom: 40px; color: var(--primary); }
+
+        .nav-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .nav-item i { margin-right: 12px; }
+        .nav-item:hover, .nav-item.active { background: var(--primary); color: white; }
+
+        /* Content Area */
+        .content { margin-left: 260px; padding: 40px; width: calc(100% - 260px); }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"><i class="fas fa-graduation-cap"></i> EduStream</div>
+        <a href="/" class="nav-item"><i class="fas fa-columns"></i> Dashboard</a>
+        <a href="/add" class="nav-item"><i class="fas fa-user-plus"></i> Register Student</a>
+        <a href="/update" class="nav-item"><i class="fas fa-edit"></i> Update Marks</a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
